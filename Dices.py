@@ -3,15 +3,15 @@ import random
 class Dices:
     def amount_dice(self, amount, what_dice):
         i=0
+        dice_total = 0
         while i < amount:
-            dice_total = 0
             dice_total = dice_total + self.rolling(what_dice)
             i += 1
         return int(dice_total)
 
 
     def rolling(self, what_dice):
-        return int(random.randrange(1, what_dice))
+        return int(random.randint(1, what_dice))
 
     def main(self):
         modifer = input('what is your modifier? ')
